@@ -1,6 +1,0 @@
-framework module Pods_OldProjectName {
-  umbrella header "Pods-OldProjectName-umbrella.h"
-
-  export *
-  module * { export * }
-}

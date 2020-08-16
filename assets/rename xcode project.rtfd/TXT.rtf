@@ -1,0 +1,198 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fmodern\fcharset0 Courier;\f2\froman\fcharset0 Times-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16840\viewh22600\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Renaming a project can be a common task. You could start with a name for your project and then during the development process you decide that you want to rename the project. Unfortunately Xcode does not come with built in functionality to do this, so we need to do it manually.\
+Before we begin, I want to show you what my project looks like in Finder:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 As you can see, I have 
+\f1 Tests
+\f0 , 
+\f1 UITests
+\f0  and a 
+\f1 Podfile
+\f0 . This way we can see how to rename a project that has most of what a regular project might have.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f2\b\fs36 \cf2 Step 1: Rename the root directory\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 The first thing that we need to do is to rename our projects root directory, my new project name will be 
+\f1 NewProjectName
+\f0 :\
+\pard\pardeftab720\partightenfactor0
+\cf2 \pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f2\b\fs36 \cf2 Step 2: Change the project file's name\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 To do this, click on your project file in the 
+\f1 Project Navigator
+\f0 :\
+\pard\pardeftab720\partightenfactor0
+\cf2 \pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 Next, open the 
+\f1 Inspectors
+\f0  pane on the right:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 As you can see in the above image, you should see, 
+\f1 Identity and Type
+\f0 , if you don't make sure that the 
+\f1 File Inspector
+\f0  is open. Let's update this name to our new project name:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 Once you have updated the text you should see a rename prompt like this(this can sometimes take a while to show up, so you might need to wait for it):\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 Click on 
+\f1 Rename
+\f0 . You might get an 
+\f1 uncommitted changes
+\f0  warning, I just clicked continue as we are still busy renaming everything:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 After you click 
+\f1 Continue
+\f0  you will see a similar prompt to the rename prompt, but this time it will have an 
+\f1 ok
+\f0  button, just leave it, the prompt will disappear after a few seconds, the prompt will look similar to this:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f2\b\fs36 \cf2 Step 3: Update project structure to reflect new name\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 After all of this we can see that our project structure does not reflect the new project name:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 To update this we will just rename each folder manually. To do this, click on the folder and press 
+\f1 Enter
+\f0  to rename the folder:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f2\b\fs36 \cf2 Step 4: Update the Scheme to the new project name\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 To rename the scheme, you can click on the active scheme and then click on 
+\f1 Manage Scheme
+\f0 :\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 When you click on it, you will have the following pop up:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 Double click/Press enter on the old scheme to make the field editable, change the name to your new project name and click close.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f2\b\fs36 \cf2 Step 5: Update build settings\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 To update build settings, click on your project file in the 
+\f1 Project Navigator
+\f0  and then click on your projects target:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 As you can see in the above image, I have clicked on my projects target and then I clicked on the build settings tab at the top. Once you have done that, type your old project name into the search bar. For me, this shows that there are two places that I need to update the old name to the new name. \
+By the time you are done renaming you don't want to see any results in build settings when searching for the old project name.\
+If you do not have cocoapods installed then this is all that you need to do, you should be able to build and run your app now, but if you have unit tests we will need to update that first. \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f2\b\fs36 \cf2 Step 6: Rename unit tests\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 As you can see, my unit tests file names and class names are out of date:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 First things first, I am going to rename the files, and then I will update the class names, but, as you can see from the above image, there is an issue when importing 
+\f1 OldProjectName
+\f0 , so this needs to be changed too. \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 If I try to run these tests I still get an error, this is due to the 
+\f1 Build Settings
+\f0  for the unit test targets. In this project I have normal tests and ui tests so I need to go to both of those targets and update the 
+\f1 Build Settings
+\f0 . This will be exactly the same as in 
+\f1 Step 5
+\f0 . \
+Once you have updated the unit test 
+\f1 Build Settings
+\f0  you should be able to run them as expected.\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f2\b\fs36 \cf2 Step 7: Rename pod related files and content\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\b0\fs24 \cf2 To be safe I am going to force quite Xcode for this section. The first thing that we need to do is to rename our 
+\f1 .xcworkspace
+\f0  file to use the new project name:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 Now we need to run 
+\f1 pod deintegrate
+\f0 . As the name suggests, this will deintegrate pods with your project, but, 
+\f1 Podfile
+\f0 , 
+\f1 Podfile.lock
+\f0  and the 
+\f1 .xcworkspace
+\f0  file will still exist which is fine. \
+After we have run 
+\f1 pod deintegrate 
+\f0 we need to update our 
+\f1 Podfile
+\f0  by changing the old project name to the new one, my old 
+\f1 Podfile
+\f0  looked like this:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 And my new 
+\f1 Podfile
+\f0  looks like this:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 Now that we have updated all these references, we can run 
+\f1 pod install
+\f0  and open the 
+\f1 .xcworkspace
+\f0 . When you open 
+\f1 .xcworkspace
+\f0  you will see that the 
+\f1 Frameworks, Libraries and Embedded Content
+\f0  will have 
+\f1 Pods_\{your new project name\}.framework
+\f0 .\
+You should now be able to build and run the project!\
+}
